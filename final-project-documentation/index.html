@@ -6,7 +6,7 @@
         <!-- meta viewport tag needed to make site responsive on mobile devices https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>WCC Portfolio - Demo Page</title>
+        <title>WCC Portfolio - Final Page</title>
 
         <!-- including for some global styling -->
         <link rel="stylesheet" href="../css/style.css">
@@ -19,86 +19,71 @@
         </nav>
         <header class="documentation-header">
             <section class="center-text">
-                <h1>Work Title</h1>
-                <h2>by Your Name</h6>
-                <p>Write a one-sentence summary of what the project is.</p> 
+                <h1>Rhizome</h1>
+                <h2>by Yike Hu</h6>
+                <p>By altering the traditional form of a tree, Rhizome expresses the concept of decentralization.</p> 
             </section>
         </header>
 
         <main class="documentation-page">
             <section>
                 <div class="responsive-video centered-content">
-                    <iframe title="vimeo-player" src="https://player.vimeo.com/video/644036051?h=b260a3b1b0" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://player.vimeo.com/video/822709086?h=4a7d0faa16" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
             </section>
             <section>
                 <h3>Introduction</h3>
-                <p>Write a short introduction, a short paragraph, giving a bit more detail about what the project is.</p>
+                <p>Rhizome is an interactive artwork based on p5js written in JavaScript, using the handsfree.js plugin. Through this plugin's gesture tracking functionality, the project is able to recognize the pinching gesture of the audience's fingers and create particles on the canvas. Rhizome also modifies the traditional form of a tree and relates it to the audience's gestures. The audience can change the shape of the tree by changing their gestures, and the project outputs visuals and sounds, creating an interactive experience. Through this innovative interaction, Rhizome aims to create a non-linear and complex artistic experience that explores the relationship between humans and nature, and encourages the audience to reflect on the aesthetics of decentralization.</p>
             </section>
             <section>
                 <h3>Concept and Background Research</h3>
                 
-                <p>Write about the concept behind the project, in other words the creative or theoretical inspiration. Include details about any background research you may have done (don’t forget to include references in the reference section).</p>
-                <p>Consider writing about your work in relation to a creative, theoretical or computational tradition that you may be taking inspiration from, in other words think about how your work is situated in a particular making tradition. </p>
-                
+                <p>Rhizome is characterized by its decentralization, which means there is no fixed central node, but rather, multiple nodes that grow and connect to form a complex network structure. This is different from the way trees grow, which is from a central node branching outward. Thus, Rhizome and trees can be seen as two fundamentally different modes of growth, with the decentralization of Rhizome in stark contrast to the branching growth of trees.</p>
+                <p>In the biological sense, "rhizome" refers to a flat stem that grows prostrate in the shallow surface of the soil. "Rhizome" has a complex philosophical and aesthetic meaning in the work of G. Deleuze and F. Guattari's <Mille Plateaux: Capitalisme et Schizophrenie>, referring to non-central, irregular, and diversified forms. Rhizome plants are anti-central and structureless, representing postmodern cultural ideas. The late Austrian botanists Erwin Lichtenegger and Lore Kutschera produced a vast root atlas, depicting the subsurface of roots of common plants in Europe, revealing the unknown complexity and beauty of plants. The author found a spiritual connection between "rhizome" and the concept of "A Thousand Plateaus," emphasizing the post-structuralist state of multiple generation, which has a certain philosophical quality.</p>
                 <!-- if you have a full width image try make it not too tall -->
-                <img src="../assets/images/repeating-diagonal-lines-strip.jpeg"/>
+                <div style="text-align: center;">
+                    <img src="../assets/images/img8.png" style="max-width: 50%; height: auto;"/>
+                  </div>
+
+                <p>In my project, i would like to express the concept of decentralization through the branching and growth of trees. By using the speed of finger movement to determine the rate of growth, the speed of the tree's growth constantly changes, resulting in a non-linear, complex growth process. This non-linear, non-central structure aligns with the philosophical and aesthetic ideas of Rhizome, embodying a "structureless" structure and reinforcing the conceptual richness of Rhizome.</p>
+
                 
             </section>
             <section>
                 <h3>Technical Implementation</h3>
 
-                <!-- example of styling for three images, you can write your own styling -->
-                <div class="flex-container flex-basis-third">
-                    <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-square.jpeg"/>
-                    </div>
-                    <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-square.jpeg"/>
-                    </div>
-                    <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-square.jpeg"/>
-                    </div>
-                </div>
                 
-                <p>Write about the process of implementing your project. What technical elements or hardware are involved in your system. Write about why you made certain technical or design decisions etc. </p>
+                <p>First of all, i want to create a tree as a background.So i am inspired by L-system and recursion taught last term and create an empty array called tree, initializes a variable count to 0, a variable growthSpeed to 100 which determines how fast the tree grows, a variable currentFrame to 0 which keeps track of the current frame, and a variable maxFrames to 1000 which sets the maximum number of frames for tree growth.I use  setup() function initializes the canvas and creates a root branch object at the center bottom of the canvas, and adds it to the tree array.The growTree() function uses a loop to iterate over all the branches of the tree, and creates two new branches (one to the right and one to the left) for each existing branch, which are then added to the tree array. This process continues for a maximum of 6 iterations and within a maximum number of frames set by the maxFrames variable.The animateTree() function is responsible for the animation of the tree. It calls the growTree() function every growthSpeed frames to grow the tree. It also clears the background and shows each branch of the tree using the show() method defined in the Branch class. It continues animating until the currentFrame reaches the maxFrames.Then the draw() function calls the animateTree() function to start the animation.Finally, the code defines a Branch class, which has a begin and an end vector to represent the starting and ending points of a branch. The branchRight() and branchLeft() methods create new branches that grow to the right and left of the current branch, respectively. The show() method draws the branch on the canvas using the strokeWeight() and line() functions. </p>
             
                 <!-- example of styling for three images, you can write your own styling -->
                 <div class="flex-container flex-basis-half">
                     <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                        <img src="../assets/images/1.png"/>
                     </div>
                     <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                        <img src="../assets/images/2.png"/>
                     </div>
+                    
                 </div>
+                
+                <p>Then I want to change the shape of the tree through technology to express the idea of decentralization, which necessarily adds interaction with the audience. I was inspired by the lesson about teach webcam and find a plugin that I thought was suitable to achieve this effect.So i add in something interactive where the user can create an art piece by moving their hands. The program uses the "Handsfree.js" library that allows the user to interact with the application using their webcam, which allows hand tracking and gesture recognition using the computer's webcam.The program detects the hand and fingers positions and produces a water ripple effect based on the movement of the fingers. It also uses particles to create a water-like animation and plays background music. </p>
 
-                <!-- default flex item is for 4 & follows media query styling for home page -->
-                <div class="flex-container">
-                    <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
-                    </div>
-                    <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
-                    </div>
-                    <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
-                    </div>
-                    <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
-                    </div>
-                </div>
-         
+                <p>In addition, I also make the choice of sound when interacting. I chose the sound of a Chinese traditional musical instrument as the output audio, because this traditional musical instrument is made of trees and is inextricably related to trees, also the gesture which put the thumb and other fingers together is also the gesture when playing this instrument. The wood ensure that the sound of the instrument is pure and stable. Moreover, when the instrument is played, players often use metaphors such as "rustling leaves and loose waves" to describe its timbre. In ancient Chinese culture, trees were given important symbolic meanings and were closely related to the human soul. </p>
+
+                <p>Overall, this program provides a unique and interactive way for users to create a beautiful visualization of a growing tree. </p>
+     
             </section>
             <section>
                 <h3>Reflection and Future Development</h3>
-                <p>Reflect on how the project went, what went well, what you learnt etc. Based on these reflections, conclude with how you would further develop this project if you were to make another version or how you would further develop your ideas.</p>
+                <p>Due to the limitations of my capability, I actually wanted to use the three.js to make the growth of the tree and make its form more natural, but I failed, so I had to change my thinking and use 2D technology to achieve the effect. However, this allowed me to better learn some of the interactive plugins of the p5 .js, which is no longer like the unilateral output of the creator of the previous project, and achieves the communication and connection between the audience and the author to make works of art together, which is also the effect I very much want to achieve.</p>
             </section>
             <section>
                 <h3>References</h3>
                 <ul>
-                    <li>Technical Reference example. Include link where possible.</li>
-                    <li>Conceptual Reference example. Include link where possible.</li>
+                    <li>Deleuze, G. and Guattari, F., 1980. Mille plateaux (Vol. 4). Paris: éd. de Minuit.</li>
+                    <li><a href="https://editor.p5js.org/pixelfelt/sketches/oS5CwSbM1">"finger paint" with Handsfree</a></li>
+                    <li>Barbrook, Richard and Cameron, Andy. The Californian Ideology. Science as Culture, 1996.</li>
+                    <li>Castells, Manuel. The Rise of the Network Society. Malden, Mass.: Blackwell, 2000.</li>
                 </ul>
             </section>
         </main>

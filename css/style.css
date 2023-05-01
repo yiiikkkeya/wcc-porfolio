@@ -214,6 +214,16 @@ img{
     color:#282376;
 }
 
+.flex-item a#finaldocumentation{
+    background-image: url(../assets/images/3.png); 
+    color:#14391d;
+}
+
+.flex-item a#finallink{
+    background-image: url(../assets/images/4.png); 
+    color:#14391d;
+}
+
 .flex-item a:hover{
     color:#bbbbbb;
     background-size: 120%;
