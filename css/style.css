@@ -201,12 +201,17 @@ img{
 
 .flex-item a#make-scrape{
     background-image: url(../assets/images/img5.png); 
-    color:#b237ff;
+    color:#ff37da;
 }
 
 .flex-item a#data-visualization{
     background-image: url(../assets/images/img6.png); 
     color:#6dcfd4;
+}
+
+.flex-item a#seeingsensing{
+    background-image: url(../assets/images/img7.jpeg); 
+    color:#282376;
 }
 
 .flex-item a:hover{
